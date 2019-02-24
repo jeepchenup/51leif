@@ -1,4 +1,6 @@
-# configure fetch repository
+# configure fetch source repository.
+# if you can not fetch sources in rubygems.org, 
+# please change source repository path.
 # source "https://rubygems.org"
 source "https://gems.ruby-china.com"
 

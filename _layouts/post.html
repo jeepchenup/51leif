@@ -1,9 +1,23 @@
 ---
 layout: default
 ---
-
-<h1>{{ page.title }}</h1>
-
-<p>{{ page.date | date_to_String }} - {{ page.author }}</p>
-
-{{ content }}
+<div class="card card-blog">
+    <div class="card-header card-header-image">
+        <a href="#pablo">
+            {% if page.articleBGImagePath != null %}
+                <img class="img" src="{{ page.articleBGImagePath }}"/>
+            {% else %}
+                <img class="img" src="/assets/imgs/articleBackground.jpg">
+            {% endif %}
+            <div class="card-title">
+                <h4>Author：{{ page.author }}</h4>
+                <h6 class="text-gray text-left">Date：{{ page.date | date: "%F" }}</h6>
+            </div>
+        </a>
+    </div>
+    <div class="card-body">
+        <h2>{{ page.title }}</h4>
+        <p class="card-description">{{ page.description }}</p>
+        {{ content }}
+    </div>
+</div>
