@@ -3,7 +3,7 @@
 title: C <i class="fa fa-heartbeat icon-red"></i> L
 email: jeepchenup@foxmail.com
 # description: 
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/51leif" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  jeepchenup
 
