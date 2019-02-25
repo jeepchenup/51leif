@@ -5,9 +5,9 @@ layout: default
     <div class="card-header card-header-image">
         <a href="#pablo">
             {% if page.articleBGImagePath != null %}
-                <img class="img" src="{{ page.articleBGImagePath }}"/>
+                <img class="img" src="{{ page.articleBGImagePath | prepend: site.baseurl }}"/>
             {% else %}
-                <img class="img" src="/assets/imgs/articleBackground.jpg">
+                <img class="img" src="{{ "/assets/imgs/articleBackground.jpg" | prepend: site.baseurl }}">
             {% endif %}
             <div class="card-title">
                 <h4>Author：{{ page.author }}</h4>
