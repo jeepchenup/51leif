@@ -1,8 +1,8 @@
 # configure fetch source repository.
 # if you can not fetch sources in rubygems.org, 
 # please change source repository path.
-# source "https://rubygems.org"
-source "https://gems.ruby-china.com"
+source "https://rubygems.org"
+# source "https://gems.ruby-china.com"
 
 # Hello! This is where you manage which Jekyll version is used to run.
 # When you want to use a different version, change it below, save the
