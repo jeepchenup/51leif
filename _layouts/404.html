@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        {% include head.html %}
+    </head>
+
+    <body>
+
+        {% include navigation.html %}
+
+        <div class="error">
+            <div class="container-floud">
+                <div class="col-xs-12 ground-color text-center">
+                    <div class="container-error-404">
+                        <div class="clip">
+                            <div class="shadow"><span class="digit thirdDigit"></span></div>
+                        </div>
+                        <div class="clip">
+                            <div class="shadow"><span class="digit secondDigit"></span></div>
+                        </div>
+                        <div class="clip">
+                            <div class="shadow"><span class="digit firstDigit"></span></div>
+                        </div>
+                        <div class="msg">Oh!<span class="triangle"></span></div>
+                    </div>
+                    {{ content }}
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
+
+<script type="text/javascript">
+
+(function(document) {
+
+    var time = 30;
+    var i = 0;
+    var number;
+
+    var selector1 = document.querySelector('.firstDigit');
+    var selector2 = document.querySelector('.secondDigit');
+    var selector3 = document.querySelector('.thirdDigit');
+    
+    var loop1;
+    var loop2;
+    var loop3;
+
+    loop1 = setInterval(function() {
+        "use strict";
+        if(i > 100) {
+            clearInterval(loop1);
+            selector1.textContent = 4;
+        } else {
+            selector1.textContent = randomNum();
+            i++;
+        }
+    }, time);
+
+    loop2 = setInterval(function() {
+        "use strict";
+        if(i > 80) {
+            clearInterval(loop2);
+            selector2.textContent = 0;
+        } else {
+            selector2.textContent = randomNum();
+            i++;
+        }
+    }, time);
+
+    loop3 = setInterval(function() {
+        "use strict";
+        if(i > 40) {
+            clearInterval(loop3);
+            selector3.textContent = 4;
+        } else {
+            selector3.textContent = randomNum();
+            i++;
+        }
+    }, time);
+
+    function randomNum() {
+        "use strict";
+        return Math.floor(Math.random() * 9)+1;
+    }
+})(document);
+
+</script>
