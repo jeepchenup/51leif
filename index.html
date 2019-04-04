@@ -21,7 +21,7 @@ subtitle: 呀~你的农夫三拳有点疼！
             <div class="row">
                 {% for post in site.posts %}
                 <!-- latest posts only show 4 articles -->
-                    {% if forloop.index <=4 %}
+                    {% if forloop.index <= site.data.customConfig.postSize %}
                         <div class="col-md-6">
                             <div class="card card-nav-tabs">
                                 <div class="card-header card-header-primary">文章</div>
