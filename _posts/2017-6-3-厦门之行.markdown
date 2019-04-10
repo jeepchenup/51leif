@@ -2,6 +2,7 @@
 layout : post
 author : 阿贝
 title : 厦门之行
+headImageUrl : http://cdn.51leif.com/image/2017/6/3/%E5%8E%A6%E9%97%A8%E4%B9%8B%E8%A1%8C-13.jpg
 ---
 
 转眼5月都快过完了~一直没有时间写（咳咳，其实就是懒，不想写_(:з」∠)_）

@@ -2,6 +2,7 @@
 layout : post
 title : 南京之行
 author : 阿贝
+headImageUrl : http://cdn.51leif.com/%E5%8D%97%E4%BA%AC%E8%A1%8C-title.jpg
 ---
 
 > 不要攻略，我们要走出自己的旅游攻略 —— 懒芳

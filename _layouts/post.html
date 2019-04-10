@@ -4,8 +4,8 @@ layout: default
 <div class="card card-blog">
     <div class="card-header card-header-image">
         <a href="#pablo">
-            {% if page.articleBGImagePath != null %}
-                <img class="img" src="{{ page.articleBGImagePath | prepend: site.baseurl }}"/>
+            {% if page.headImageUrl != null %}
+                <img class="img" src="{{ page.headImageUrl | prepend: site.baseurl }}"/>
             {% else %}
                 <img class="img" src="{{ "/assets/imgs/articleBackground.jpg" | prepend: site.baseurl }}">
             {% endif %}
