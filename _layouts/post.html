@@ -3,21 +3,33 @@ layout: default
 ---
 <div class="card card-blog">
     <div class="card-header card-header-image">
-        <a href="#pablo">
-            {% if page.headImageUrl != null %}
-                <img class="img" src="{{ page.headImageUrl | prepend: site.baseurl }}"/>
-            {% else %}
-                <img class="img" src="{{ "/assets/imgs/articleBackground.jpg" | prepend: site.baseurl }}">
-            {% endif %}
-            <div class="card-title">
-                <h4>Author：{{ page.author }}</h4>
-                <h6 class="text-gray text-left">Date：{{ page.date | date: "%F" }}</h6>
-            </div>
-        </a>
+        {% if page.headImageUrl != null %}
+            <img class="img" src="{{ page.headImageUrl | prepend: site.baseurl }}"/>
+        {% else %}
+            <img class="img" src="{{ "/assets/imgs/articleBackground.jpg" | prepend: site.baseurl }}">
+        {% endif %}
+        <div class="card-title">
+            <h4>作者：{{ page.author }}</h4>
+            <h6 class="text-gray text-left">时间：{{ page.date | date: "%F" }}</h6>
+        </div>
     </div>
     <div class="card-body">
-        <h2>{{ page.title }}</h4>
-        <p class="card-description">{{ page.description }}</p>
+        {% if page.description != null %}
+            <div class="card">
+                <div class="card-body">
+                    <h6 class="card-category text-danger">
+                        <i class="material-icons">textsms</i> 前言
+                    </h6>
+                    <h4 class="card-title">
+                        <blockquote class="blockquote mb-0">
+                            <p>{{ page.description }}</p>
+                            <footer class="blockquote-footer">{{ page.descriptionBy }}</footer>
+                        </blockquote>
+                    </h4>
+                </div>
+            </div>
+        {% endif %}
+
         {{ content }}
     </div>
 </div>
